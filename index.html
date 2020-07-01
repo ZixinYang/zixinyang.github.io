@@ -1,0 +1,108 @@
+---
+layout: default
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<div class="post">
+  <article class="post-content">
+
+    <div style="text-align:center;">
+      <img src="{{ site.baseurl }}/images/about/me.jpg" alt="Cynthia Yang"
+        style="
+          width: 250px;
+        "/>
+    </div>
+
+    <!-- <header class="post-header" style="text-align: center;">
+      <h1 class="h2">Hi, I'm Cynthia</h1>
+    </header> -->
+
+    <header class="site-header px2 px-responsive">
+      <div class="wrap">
+        <div class="measure">
+          <div class="clearfix"></div>
+          {% if site.show_social_icons %}
+            {% include social_links.html %}
+          {% endif %}
+        </div>
+      </div>
+    </header>
+
+    <p>
+    </p>
+
+  </article>
+</div>
+
+<div id="Education" class="post">
+    <article class="post-content">
+        <header class="post-header">
+          <h1 class="h2">Education</h1>
+        </header>
+    </article>
+</div>
+
+  <td valign="top" width="75%">
+
+    <h4>M.Sc in Computer and Communication Engineering</h4>
+    <small>
+        National Cheng Kung University, Taiwan
+    </small>
+    <h4>B.Eng in Electrical and Computer Engineering</h4>
+    <small>
+        National Chiao Tung University, Taiwan
+    </small>
+
+<div id="Experience" class="post">
+    <article class="post-content">
+        <header class="post-header">
+          <h1 class="h2">Experience</h1>
+        </header>
+    </article>
+</div>
+
+<td valign="top" width="75%">
+
+  <h4>Data Scientist</h4>
+  <small>
+      KKBOX,  Research Center
+  </small>
+  <h4>Deep Learning Scientist and Bioinformatician</h4>
+  <small>
+      Insilico Medicine, Deep Learning Team
+  </small>
+  <h4>Part time iOS Developer</h4>
+  <small>
+      National Cheng Kung University, Main Library
+  </small>
+  <h4>Teaching Assistant for CS101 (Introduction to Computers)</h4>
+  <small>
+      National Cheng Kung University, Department of Electrical Engineering
+  </small>
